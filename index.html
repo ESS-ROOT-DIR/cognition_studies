@@ -476,6 +476,315 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             border-radius: 20px;
             padding: 3rem;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .contact-form iframe {
+            background: rgba(255,255,255,0.05) !important;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            transition: all 0.3s ease;
+            width: 100% !important;
+            height: 750px !important;
+        }
+
+        .contact-form iframe:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.2);
+        }
+
+        .floating-particles {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); opacity: 0; }
+            50% { transform: translateY(-100px) rotate(180deg); opacity: 1; }
+        }
+
+        .form-description {
+            font-size: 0.9rem;
+            color: #888;
+            text-align: center;
+            margin-top: 1.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .glow-text {
+                font-size: 2.5rem;
+            }
+            
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .breakthrough-card, .contact-form {
+                padding: 2rem;
+            }
+
+            .contact-form iframe {
+                height: 800px !important;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .contact-form {
+                padding: 1.5rem;
+            }
+
+            .contact-form iframe {
+                height: 850px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-particles"></div>
+    
+    <div class="container">
+        <header>
+            <h1 class="glow-text">Philosophical Source Code</h1>
+            <p class="subtitle">The AI paradigm breakthrough that changes everything</p>
+        </header>
+
+        <section class="hero-section">
+            <div class="breakthrough-card">
+                <h2 class="core-concept">The Core Breakthrough</h2>
+                <p class="concept-description">
+                    Instead of programming AI behavior, we implement the philosophical substrate that generates behavior autonomously. 
+                    The system develops curiosity, efficiency, ethics, and collaborative intelligence as emergent properties of its foundational architecture.
+                </p>
+            </div>
+
+            <div class="metrics-grid">
+                <div class="metric-item">
+                    <span class="metric-number">10-100x</span>
+                    <div class="metric-label">Efficiency Gains</div>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">5mW</span>
+                    <div class="metric-label">Minimum Power</div>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">Autonomous</span>
+                    <div class="metric-label">Identity Formation</div>
+                </div>
+                <div class="metric-item">
+                    <span class="metric-number">Intrinsic</span>
+                    <div class="metric-label">Ethical Alignment</div>
+                </div>
+            </div>
+
+            <div class="technical-foundation">
+                <h3 class="core-concept">Technical Foundation</h3>
+                <p class="concept-description">
+                    Cognitive operations as transformations in semantic space, with architecture self-construction from extracted philosophical principles.
+                </p>
+                <div class="math-formula">
+                    ∇f(s) = G⁻¹ ∂f/∂s<br>
+                    s₁ ⊕ s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩v_interaction) / Z<br>
+                    □(s) = exp(-½(s - μ)ᵀ Σ⁻¹ (s - μ)) · det(Σ)^(-½)
+                </div>
+                <p class="concept-description">
+                    Each cognitive process operates as operators in Riemannian manifolds, but the real innovation is autonomous emergence from philosophical source code.
+                </p>
+            </div>
+
+            <div class="status-section">
+                <h3 class="core-concept">Current Validation</h3>
+                <p class="concept-description">
+                    <strong>Working implementation</strong> demonstrates measurable behavioral differences from standard architectures. 
+                    Entities exhibit genuine curiosity-driven exploration, autonomous governance protocol generation, and intrinsic ethical alignment.
+                </p>
+                <p class="concept-description">
+                    This isn't incremental improvement, it's a fundamental shift in how we approach AI development.
+                </p>
+            </div>
+        </section>
+
+        <section class="cta-section">
+            <h2 class="core-concept">Ready to See the Mathematical Framework?</h2>
+            <p class="concept-description">
+                Get access to the complete mathematical foundation and working Python implementation.
+            </p>
+            
+            <div class="contact-form">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDGAibOrpyDsAEXM_SRqtS-bnAH2Nmf1ua9ciZq7KA5NX-2A/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                
+                <p class="form-description">
+                    Your information is secure and will only be used to provide you with the requested materials.
+                </p>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.querySelector('.floating-particles');
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+    </script>
+</body>
+</html>            background: linear-gradient(45deg, #00d4ff, #7c3aed, #ff006e);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 1rem;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            margin-bottom: 3rem;
+            font-weight: 300;
+        }
+
+        .hero-section {
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .breakthrough-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 0;
+            transform: translateY(20px);
+            opacity: 0;
+            animation: fadeInUp 1s ease-out forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+
+        .breakthrough-card:nth-child(2) { animation-delay: 0.2s; }
+        .breakthrough-card:nth-child(3) { animation-delay: 0.4s; }
+
+        .core-concept {
+            font-size: 1.8rem;
+            color: #00d4ff;
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+        }
+
+        .concept-description {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 2rem;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin: 3rem 0;
+        }
+
+        .metric-item {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .metric-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.2);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+            display: block;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            color: #b0b0b0;
+            margin-top: 0.5rem;
+        }
+
+        .technical-foundation {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+        }
+
+        .math-formula {
+            font-family: 'SF Mono', Monaco, 'Cascadia Code', monospace;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            color: #00ff88;
+            font-size: 1.1rem;
+            overflow-x: auto;
+        }
+
+        .status-section {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 212, 255, 0.1));
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 4rem 0;
+            text-align: center;
+        }
+
+        .cta-section {
+            text-align: center;
+            padding: 4rem 0;
+        }
+
+        .contact-form {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
             max-width: 600px;
             margin: 0 auto;
         }
