@@ -12,29 +12,331 @@
         }
 
         body {
-            font-family: 'SF Pro Display', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
             background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
             color: #ffffff;
             line-height: 1.6;
-            overflow-x: hidden;
+            min-height: 100vh;
         }
 
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 0 20px;
+            padding: 20px;
         }
 
-        header {
-            padding: 2rem 0;
+        /* Header Styles */
+        .header {
             text-align: center;
-            position: relative;
+            padding: 60px 0 40px 0;
         }
 
-        .glow-text {
+        .main-title {
             font-size: 3.5rem;
             font-weight: 700;
             background: linear-gradient(45deg, #00d4ff, #7c3aed, #ff006e);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradientShift 3s ease-in-out infinite;
+            margin-bottom: 20px;
+        }
+
+        @keyframes gradientShift {
+            0%, 100% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            color: #a0a0a0;
+            font-weight: 300;
+            margin-bottom: 60px;
+        }
+
+        /* Card Styles */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            margin: 30px 0;
+        }
+
+        .section-title {
+            font-size: 1.8rem;
+            color: #00d4ff;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .description {
+            font-size: 1.1rem;
+            color: #e0e0e0;
+            margin-bottom: 30px;
+        }
+
+        /* Metrics Grid */
+        .metrics {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+
+        .metric {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .metric:hover {
+            transform: translateY(-5px);
+        }
+
+        .metric-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #00d4ff;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            color: #b0b0b0;
+        }
+
+        /* Technical Section */
+        .technical {
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.3);
+        }
+
+        .math-block {
+            font-family: 'Courier New', monospace;
+            background: rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: 20px;
+            margin: 20px 0;
+            color: #00ff88;
+            font-size: 1.1rem;
+            overflow-x: auto;
+        }
+
+        /* Status Section */
+        .status {
+            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 212, 255, 0.1));
+            text-align: center;
+        }
+
+        /* Form Section */
+        .form-section {
+            text-align: center;
+            padding: 60px 0;
+        }
+
+        .form-container {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .google-form {
+            width: 100%;
+            height: 750px;
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 15px;
+            background: rgba(255,255,255,0.05);
+        }
+
+        .form-note {
+            font-size: 0.9rem;
+            color: #888;
+            margin-top: 20px;
+        }
+
+        /* Floating Particles */
+        .particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: rgba(0, 212, 255, 0.6);
+            border-radius: 50%;
+            animation: float 6s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0%, 100% { 
+                transform: translateY(0px) rotate(0deg); 
+                opacity: 0; 
+            }
+            50% { 
+                transform: translateY(-100px) rotate(180deg); 
+                opacity: 1; 
+            }
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5rem;
+            }
+            
+            .metrics {
+                grid-template-columns: 1fr;
+            }
+            
+            .card, .form-container {
+                padding: 25px;
+            }
+
+            .google-form {
+                height: 800px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .google-form {
+                height: 850px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="particles"></div>
+    
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="main-title">Philosophical Source Code</h1>
+            <p class="subtitle">The AI paradigm breakthrough that changes everything</p>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Core Breakthrough -->
+            <section class="card">
+                <h2 class="section-title">The Core Breakthrough</h2>
+                <p class="description">
+                    Instead of programming AI behavior, we implement the philosophical substrate that generates behavior autonomously. 
+                    The system develops curiosity, efficiency, ethics, and collaborative intelligence as emergent properties of its foundational architecture.
+                </p>
+            </section>
+
+            <!-- Metrics -->
+            <section class="metrics">
+                <div class="metric">
+                    <span class="metric-number">10-100x</span>
+                    <div class="metric-label">Efficiency Gains</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">5mW</span>
+                    <div class="metric-label">Minimum Power</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">Autonomous</span>
+                    <div class="metric-label">Identity Formation</div>
+                </div>
+                <div class="metric">
+                    <span class="metric-number">Intrinsic</span>
+                    <div class="metric-label">Ethical Alignment</div>
+                </div>
+            </section>
+
+            <!-- Technical Foundation -->
+            <section class="card technical">
+                <h3 class="section-title">Technical Foundation</h3>
+                <p class="description">
+                    Cognitive operations as transformations in semantic space, with architecture self-construction from extracted philosophical principles.
+                </p>
+                <div class="math-block">
+                    ∇f(s) = G⁻¹ ∂f/∂s<br>
+                    s₁ ⊕ s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩v_interaction) / Z<br>
+                    □(s) = exp(-½(s - μ)ᵀ Σ⁻¹ (s - μ)) · det(Σ)^(-½)
+                </div>
+                <p class="description">
+                    Each cognitive process operates as operators in Riemannian manifolds, but the real innovation is autonomous emergence from philosophical source code.
+                </p>
+            </section>
+
+            <!-- Current Validation -->
+            <section class="card status">
+                <h3 class="section-title">Current Validation</h3>
+                <p class="description">
+                    <strong>Working implementation</strong> demonstrates measurable behavioral differences from standard architectures. 
+                    Entities exhibit genuine curiosity-driven exploration, autonomous governance protocol generation, and intrinsic ethical alignment.
+                </p>
+                <p class="description">
+                    This isn't incremental improvement, it's a fundamental shift in how we approach AI development.
+                </p>
+            </section>
+
+            <!-- Contact Form -->
+            <section class="form-section">
+                <h2 class="section-title">Ready to See the Mathematical Framework?</h2>
+                <p class="description">
+                    Get access to the complete mathematical foundation and working Python implementation.
+                </p>
+                
+                <div class="form-container">
+                    <iframe 
+                        class="google-form"
+                        src="https://docs.google.com/forms/d/e/1FAIpQLScDGAibOrpyDsAEXM_SRqtS-bnAH2Nmf1ua9ciZq7KA5NX-2A/viewform?embedded=true" 
+                        frameborder="0" 
+                        marginheight="0" 
+                        marginwidth="0">
+                        Loading contact form...
+                    </iframe>
+                    
+                    <p class="form-note">
+                        Your information is secure and will only be used to provide you with the requested materials.
+                    </p>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const container = document.querySelector('.particles');
+            if (!container) return;
+            
+            for (let i = 0; i < 50; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 6 + 's';
+                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
+                container.appendChild(particle);
+            }
+        }
+
+        // Initialize when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+    </script>
+</body>
+</html>            background: linear-gradient(45deg, #00d4ff, #7c3aed, #ff006e);
             background-size: 200% 200%;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
