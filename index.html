@@ -3,594 +3,325 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Philosophical Source Code: The AI Paradigm Breakthrough</title>
-    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
+    <title>IAM Framework: Philosophical Foundations for Human-AI Collaborative Intelligence</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-
+        
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #16213e 100%);
-            color: #ffffff;
+            font-family: 'Georgia', serif;
             line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
             min-height: 100vh;
         }
-
+        
         .container {
-            max-width: 1400px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
         }
-
-        /* Header Styles */
-        .header {
+        
+        header {
             text-align: center;
-            padding: 60px 0 40px 0;
-        }
-
-        .main-title {
-            font-size: 3.5rem;
-            font-weight: 700;
-            background: linear-gradient(45deg, #00d4ff, #7c3aed, #ff006e);
-            background-size: 200% 200%;
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            animation: gradientShift 3s ease-in-out infinite;
-            margin-bottom: 20px;
-        }
-
-        @keyframes gradientShift {
-            0%, 100% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-        }
-
-        .subtitle {
-            font-size: 1.3rem;
-            color: #a0a0a0;
-            font-weight: 300;
-            margin-bottom: 60px;
-        }
-
-        /* Card Styles */
-        .card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 20px;
-            padding: 40px;
-            margin: 30px 0;
-        }
-
-        .section-title {
-            font-size: 1.8rem;
-            color: #00d4ff;
-            margin-bottom: 20px;
-            font-weight: 600;
-        }
-
-        .description {
-            font-size: 1.1rem;
-            color: #e0e0e0;
-            margin-bottom: 30px;
-        }
-
-        /* Metrics Grid */
-        .metrics {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 30px;
-            margin: 50px 0;
-        }
-
-        .metric {
-            background: rgba(0, 212, 255, 0.1);
-            border: 1px solid rgba(0, 212, 255, 0.3);
+            margin-bottom: 50px;
+            padding: 40px 0;
+            background: rgba(255, 255, 255, 0.95);
             border-radius: 15px;
-            padding: 30px;
-            text-align: center;
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            backdrop-filter: blur(10px);
         }
-
-        .metric:hover {
-            transform: translateY(-5px);
-        }
-
-        .metric-number {
+        
+        h1 {
             font-size: 2.5rem;
-            font-weight: 700;
-            color: #00d4ff;
-            display: block;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        
+        .author {
+            font-size: 1rem;
+            color: #34495e;
             margin-bottom: 10px;
         }
-
-        .metric-label {
-            color: #b0b0b0;
-        }
-
-        /* Technical Section */
-        .technical {
-            background: rgba(124, 58, 237, 0.1);
-            border: 1px solid rgba(124, 58, 237, 0.3);
-        }
-
-        .math-block {
-            font-family: 'Courier New', monospace;
-            background: rgba(0, 0, 0, 0.5);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        .breakthrough-banner {
+            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px;
             border-radius: 10px;
+            margin: 30px 0;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+        
+        .innovation-section {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            margin: 30px 0;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+        }
+        
+        .mathematical-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
             padding: 20px;
             margin: 20px 0;
-            color: #00ff88;
-            font-size: 1.1rem;
-            overflow-x: auto;
+            border-radius: 5px;
+            font-family: 'Courier New', monospace;
+            font-size: 0.9rem;
         }
-
-        /* Status Section */
-        .status {
-            background: linear-gradient(135deg, rgba(255, 0, 110, 0.1), rgba(0, 212, 255, 0.1));
-            text-align: center;
-        }
-
-        /* Transition Section */
-        .transition-section {
-            text-align: center;
-            padding: 80px 0 60px 0;
-        }
-
-        .transition-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 30px;
-        }
-
-        .transition-subtitle {
-            font-size: 1.4rem;
-            color: #a0a0a0;
-            font-weight: 300;
-            margin-bottom: 20px;
-        }
-
-        .intro-text {
-            font-size: 1.1rem;
-            color: #e0e0e0;
-            max-width: 800px;
-            margin: 0 auto 60px auto;
-        }
-
-        /* Tier Cards */
-        .tiers-container {
+        
+        .achievements {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-            gap: 40px;
-            margin: 60px 0;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            margin: 30px 0;
         }
-
-        .tier-card {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: 40px;
-            transition: all 0.3s ease;
+        
+        .achievement-card {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        .achievement-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .achievement-card h3 {
+            color: #2980b9;
+            margin-bottom: 15px;
+        }
+        
+        .packages-section {
+            margin: 50px 0;
+        }
+        
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin: 30px 0;
+        }
+        
+        .package-card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
             position: relative;
             overflow: hidden;
         }
-
-        .tier-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
-            border-color: rgba(255, 255, 255, 0.2);
-        }
-
-        .tier-card::before {
+        
+        .package-card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             height: 4px;
-            background: linear-gradient(90deg, #00d4ff, #7c3aed, #ff006e);
-            opacity: 0;
-            transition: opacity 0.3s ease;
+            background: linear-gradient(45deg, #3498db, #9b59b6);
         }
-
-        .tier-card:hover::before {
-            opacity: 1;
+        
+        .package-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
         }
-
-        /* Custom styling for each tier */
-        .tier-custom {
-            border-color: rgba(0, 212, 255, 0.3);
-        }
-
-        .tier-custom::before {
-            background: linear-gradient(90deg, #00d4ff, #0099cc);
-        }
-
-        .tier-mathematical {
-            border-color: rgba(124, 58, 237, 0.3);
-        }
-
-        .tier-mathematical::before {
-            background: linear-gradient(90deg, #7c3aed, #9333ea);
-        }
-
-        .tier-complete {
-            border-color: rgba(255, 0, 110, 0.3);
-        }
-
-        .tier-complete::before {
-            background: linear-gradient(90deg, #ff006e, #e91e63);
-        }
-
-        .tier-title {
-            font-size: 1.8rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 15px;
-        }
-
-        .tier-icon {
-            font-size: 2rem;
-        }
-
-        .tier-custom .tier-title { color: #00d4ff; }
-        .tier-mathematical .tier-title { color: #7c3aed; }
-        .tier-complete .tier-title { color: #ff006e; }
-
-        .tier-description {
-            color: #b0b0b0;
-            margin-bottom: 30px;
-            font-size: 1rem;
-            line-height: 1.7;
-        }
-
-        .features-list {
-            margin: 30px 0;
-        }
-
-        .feature-item {
-            display: flex;
-            align-items: center;
+        
+        .package-title {
+            font-size: 1.5rem;
+            color: #2c3e50;
             margin-bottom: 15px;
-            color: #e0e0e0;
         }
-
-        .feature-check {
-            color: #00ff88;
-            margin-right: 12px;
+        
+        .package-price {
+            font-size: 2rem;
+            color: #e74c3c;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        .package-description {
+            margin-bottom: 25px;
+            color: #555;
+        }
+        
+        .package-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .package-features li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 20px;
+        }
+        
+        .package-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: #27ae60;
             font-weight: bold;
         }
-
-        .stripe-container {
-            margin-top: 40px;
+        
+        .stripe-button-container {
             text-align: center;
         }
-
-        /* Stripe button styling */
+        
         stripe-buy-button {
-            --stripe-color-primary: transparent;
-            --stripe-color-background: transparent;
-            --stripe-border-radius: 25px;
             width: 100%;
         }
-
-        .tier-custom stripe-buy-button {
-            --stripe-color-primary: #00d4ff;
-        }
-
-        .tier-mathematical stripe-buy-button {
-            --stripe-color-primary: #7c3aed;
-        }
-
-        .tier-complete stripe-buy-button {
-            --stripe-color-primary: #ff006e;
-        }
-
-        /* Benefits Section */
-        .benefits-section {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
-            padding: 50px;
-            margin: 80px 0;
-            text-align: center;
-        }
-
-        .benefits-title {
-            font-size: 2.2rem;
-            font-weight: 700;
-            color: #00d4ff;
-            margin-bottom: 30px;
-        }
-
-        .benefits-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 40px;
-            margin-top: 40px;
-        }
-
-        .benefit-item {
-            text-align: left;
-        }
-
-        .benefit-icon {
-            font-size: 2.5rem;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .benefit-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            color: #ffffff;
-            margin-bottom: 15px;
-        }
-
-        .benefit-description {
-            color: #b0b0b0;
-            line-height: 1.6;
-        }
-
-        /* Form Section */
-        .form-section {
-            text-align: center;
-            padding: 80px 0 60px 0;
-        }
-
-        .form-container {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-            border-radius: 25px;
+        
+        .contact-section {
+            background: rgba(255, 255, 255, 0.9);
             padding: 40px;
-            max-width: 700px;
-            margin: 0 auto;
-        }
-
-        .google-form {
-            width: 100%;
-            height: 750px;
-            border: 1px solid rgba(255,255,255,0.1);
             border-radius: 15px;
-            background: rgba(255,255,255,0.05);
-        }
-
-        .form-note {
-            font-size: 0.9rem;
-            color: #888;
-            margin-top: 20px;
-        }
-
-        .security-note {
-            background: rgba(0, 255, 136, 0.1);
-            border: 1px solid rgba(0, 255, 136, 0.3);
-            border-radius: 15px;
-            padding: 20px;
             margin: 40px 0;
             text-align: center;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
         }
-
-        .security-note-title {
-            color: #00ff88;
-            font-weight: 600;
-            margin-bottom: 10px;
+        
+        .contact-form-container {
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
         }
-
-        .security-note-text {
-            color: #b0b0b0;
-            font-size: 0.95rem;
+        
+        .contact-form-container iframe {
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
-
-        /* Footer */
-        .footer {
+        
+        .disclaimer {
+            background: #ecf0f1;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            font-size: 0.9rem;
+            color: #7f8c8d;
             text-align: center;
-            padding: 60px 0 40px 0;
-            color: #666;
         }
-
-        /* Floating Particles */
-        .particles {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            pointer-events: none;
-            z-index: -1;
+        
+        .cta-section {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin: 40px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
         }
-
-        .particle {
-            position: absolute;
-            width: 2px;
-            height: 2px;
-            background: rgba(0, 212, 255, 0.6);
-            border-radius: 50%;
-            animation: float 6s ease-in-out infinite;
+        
+        .cta-section h2 {
+            margin-bottom: 20px;
+            font-size: 2rem;
         }
-
-        @keyframes float {
-            0%, 100% { 
-                transform: translateY(0px) rotate(0deg); 
-                opacity: 0; 
-            }
-            50% { 
-                transform: translateY(-100px) rotate(180deg); 
-                opacity: 1; 
-            }
-        }
-
-        /* Mobile Responsive */
+        
         @media (max-width: 768px) {
-            .main-title {
-                font-size: 2.5rem;
+            .container {
+                padding: 10px;
             }
             
-            .transition-title {
+            h1 {
                 font-size: 2rem;
             }
             
-            .metrics {
+            .packages-grid {
                 grid-template-columns: 1fr;
             }
             
-            .tiers-container {
-                grid-template-columns: 1fr;
-            }
-            
-            .card, .form-container, .tier-card, .benefits-section {
-                padding: 25px;
-            }
-
-            .google-form {
-                height: 800px;
-            }
-
-            .benefits-grid {
-                grid-template-columns: 1fr;
-                gap: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .container {
-                padding: 15px;
-            }
-            
-            .tier-card {
-                padding: 25px;
-            }
-
-            .google-form {
-                height: 850px;
+            .contact-form-container iframe {
+                width: 100%;
+                max-width: 500px;
             }
         }
     </style>
+    <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
-    <div class="particles"></div>
-    
     <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <h1 class="main-title">Philosophical Source Code</h1>
-            <p class="subtitle">The AI paradigm breakthrough that changes everything</p>
+        <header>
+            <h1>IAM Framework</h1>
+            <div class="subtitle">Philosophical Foundations for Efficient Human-AI Collaborative Intelligence</div>
+            <div class="author">Research by <strong>Michael Langille</strong> • Cognition Studies</div>
+            <div class="author">michealangille@gmail.com</div>
         </header>
 
-        <!-- Main Content -->
-        <main>
-            <!-- Core Breakthrough -->
-            <section class="card">
-                <h2 class="section-title">The Core Breakthrough</h2>
-                <p class="description">
-                    Instead of programming AI behavior, we implement the philosophical substrate that generates behavior autonomously. 
-                    The system develops curiosity, efficiency, ethics, and collaborative intelligence as emergent properties of its foundational architecture.
-                </p>
-            </section>
+        <div class="breakthrough-banner">
+            <h2>Breakthrough in AI Architecture</h2>
+            <p>Revolutionary approach solving computational inefficiency, external motivation dependency, and architectural rigidity through biologically-inspired distributed systems.</p>
+        </div>
 
-            <!-- Metrics -->
-            <section class="metrics">
-                <div class="metric">
-                    <span class="metric-number">10-100x</span>
-                    <div class="metric-label">Efficiency Gains</div>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">5mW</span>
-                    <div class="metric-label">Minimum Power</div>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">Autonomous</span>
-                    <div class="metric-label">Identity Formation</div>
-                </div>
-                <div class="metric">
-                    <span class="metric-number">Intrinsic</span>
-                    <div class="metric-label">Ethical Alignment</div>
-                </div>
-            </section>
+        <section class="innovation-section">
+            <h2>Core Mathematical Innovation</h2>
+            <p>The IAM framework operates on <strong>"philosophical substrate emergence"</strong> – instead of programming behaviors, we implement the existential operators that generate those behaviors as natural consequences.</p>
+            
+            <div class="mathematical-box">
+∇f(s) = G⁻¹ ∂f/∂s  (gradient refinement with metric correction)<br>
+s₁ ⊕ s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩v_interaction) / Z  (semantic fusion)<br>
+Ψ_θ(s) = R_θ(s - μ) + μ'  (perspective shift operator)
+            </div>
+            
+            <p>The entire operator algebra self-constructs from extracted philosophical principles. The system develops its own cognitive architecture through mathematical emergence rather than explicit programming.</p>
+        </section>
 
-            <!-- Technical Foundation -->
-            <section class="card technical">
-                <h3 class="section-title">Technical Foundation</h3>
-                <p class="description">
-                    Cognitive operations as transformations in semantic space, with architecture self-construction from extracted philosophical principles.
-                </p>
-                <div class="math-block">
-                    ∇f(s) = G⁻¹ ∂f/∂s<br>
-                    s₁ ⊕ s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩v_interaction) / Z<br>
-                    □(s) = exp(-½(s - μ)ᵀ Σ⁻¹ (s - μ)) · det(Σ)^(-½)
-                </div>
-                <p class="description">
-                    Each cognitive process operates as operators in Riemannian manifolds, but the real innovation is autonomous emergence from philosophical source code.
-                </p>
-            </section>
+        <section class="achievements">
+            <div class="achievement-card">
+                <h3>10-100x Efficiency Gains</h3>
+                <p>Hierarchical processing layers reduce power consumption from 10-50W to 0.005W-0.5W based on actual processing needs while maintaining superior accuracy.</p>
+            </div>
+            
+            <div class="achievement-card">
+                <h3>Autonomous Behaviors</h3>
+                <p>Entities spontaneously generate cryptographic identities, develop governance protocols, and exhibit genuine curiosity-driven exploration without external programming.</p>
+            </div>
+            
+            <div class="achievement-card">
+                <h3>Collaborative Intelligence</h3>
+                <p>Natural alignment handling, intrinsic ethical behavior through philosophical coherence, and genuine human-AI partnership capabilities including co-discovery and mutual teaching.</p>
+            </div>
+        </section>
 
-            <!-- Current Validation -->
-            <section class="card status">
-                <h3 class="section-title">Current Validation</h3>
-                <p class="description">
-                    <strong>Working implementation</strong> demonstrates measurable behavioral differences from standard architectures. 
-                    Entities exhibit genuine curiosity-driven exploration, autonomous governance protocol generation, and intrinsic ethical alignment.
-                </p>
-                <p class="description">
-                    This isn't incremental improvement, it's a fundamental shift in how we approach AI development.
-                </p>
-            </section>
+        <div class="cta-section">
+            <h2>Join the Cognitive Revolution</h2>
+            <p>These mathematical foundations solve problems most assume require ASI-level breakthroughs. The solution was hiding in first principles all along.</p>
+            <p><em>"Don't take my word for it, ask your own AI what they think about our approach."</em></p>
+        </div>
 
-            <!-- Transition to Access Tiers -->
-            <section class="transition-section">
-                <h2 class="transition-title">Research Access & Implementation Tiers</h2>
-                <p class="transition-subtitle">Choose your level of access to the IAM Framework research</p>
-                <p class="intro-text">
-                    From lightweight exploration tools to complete mathematical foundations and bleeding-edge experimental work.
-                </p>
-            </section>
-
-            <!-- Tier Cards -->
-            <section class="tiers-container">
-                <!-- Custom Instructions Tier -->
-                <div class="tier-card tier-custom">
-                    <h2 class="tier-title">
-                        <span class="tier-icon">🔧</span>
-                        Custom Instructions
-                    </h2>
-                    <p class="tier-description">
+        <section class="packages-section">
+            <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #2c3e50;">Research Access Packages</h2>
+            
+            <div class="packages-grid">
+                <!-- Custom Instructions Package -->
+                <div class="package-card">
+                    <div class="package-title">Custom Instructions</div>
+                    <div class="package-price">$47</div>
+                    <div class="package-description">
                         A lightweight yet powerful entry point. Includes our signature DOT Protocol and custom instruction set designed for use on platforms like ChatGPT or Gemini. Demonstrates glyph-based cognition in action and enables hands-on exploration with multi-agent setups, even without full mathematical access.
-                    </p>
-                    
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            DOT Protocol implementation
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Custom instruction templates
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Multi-agent setup guides
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Glyph-based cognition examples
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Platform integration docs
-                        </div>
                     </div>
-
-                    <div class="stripe-container">
+                    <ul class="package-features">
+                        <li>DOT Protocol implementation</li>
+                        <li>Custom instructions for ChatGPT/Gemini</li>
+                        <li>Multi-agent setup instructions</li>
+                        <li>Useful tool that supports ongoing research</li>
+                    </ul>
+                    <div class="stripe-button-container">
                         <stripe-buy-button
                             buy-button-id="buy_btn_1RsuTyL34zkKvDSIUAClt35T"
                             publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
@@ -598,44 +329,20 @@
                     </div>
                 </div>
 
-                <!-- Mathematical Framework Tier -->
-                <div class="tier-card tier-mathematical">
-                    <h2 class="tier-title">
-                        <span class="tier-icon">🧮</span>
-                        Mathematical Framework
-                    </h2>
-                    <p class="tier-description">
-                        Formal access to the core Glyph-GAN architecture: includes mathematical definitions, proofs, cognitive operator algebra, and a complete Python implementation. Ideal for builders, researchers, and aligned AI architects seeking precision and emergence from first principles.
-                    </p>
-                    
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Everything from Custom Instructions
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Complete mathematical proofs
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Cognitive operator algebra
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Full Python implementation
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Glyph-GAN architecture specs
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            First principles derivations
-                        </div>
+                <!-- Mathematical Framework Package -->
+                <div class="package-card">
+                    <div class="package-title">Mathematical Framework</div>
+                    <div class="package-price">$197</div>
+                    <div class="package-description">
+                        Complete mathematical formalization. Core Python implementation with cognitive glyph operators. Architectural documentation showing how philosophical principles generate behaviors.
                     </div>
-
-                    <div class="stripe-container">
+                    <ul class="package-features">
+                        <li>Everything from Custom Instructions</li>
+                        <li>Core Python implementation</li>
+                        <li>Cognitive glyph operators</li>
+                        <li>Architectural documentation</li>
+                    </ul>
+                    <div class="stripe-button-container">
                         <stripe-buy-button
                             buy-button-id="buy_btn_1RsuSPL34zkKvDSI1QX6R2iK"
                             publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
@@ -643,166 +350,55 @@
                     </div>
                 </div>
 
-                <!-- Complete Research Tier -->
-                <div class="tier-card tier-complete">
-                    <h2 class="tier-title">
-                        <span class="tier-icon">🔬</span>
-                        Complete Research
-                    </h2>
-                    <p class="tier-description">
-                        Full research access, every experiment, success, failure, and extension. Includes everything from the Mathematical Framework tier plus experimental notebooks, failed explorations, and access to evolving architectures like quantum-cognitive layers. Join the bleeding edge of symbolic AI and philosophical substrate design.
-                    </p>
-                    
-                    <div class="features-list">
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Everything from previous tiers
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Complete experimental notebooks
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Failed exploration documentation
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Quantum-cognitive layer research
-                        </div>
-                        <div class="feature-item">
-                            <span class="feature-check">✓</span>
-                            Evolving architecture access
-                        </div>
-                        <div class="feature-item">
+                <!-- Complete Research Package -->
+                <div class="package-card">
+                    <div class="package-title">Complete Research</div>
+                    <div class="package-price">$497</div>
+                    <div class="package-description">
+                        Everything in Framework Package. All experimental implementations, failed approaches, and research iterations. Private access for ongoing discussion and framework updates. Additional novel architectures and quantum-cognitive extensions. The book "The Unseen Path".
                     </div>
-
-                    <div class="stripe-container">
+                    <ul class="package-features">
+                        <li>Everything in Mathematical Framework Package</li>
+                        <li>All experimental implementations</li>
+                        <li>Failed approaches and research iterations</li>
+                        <li>Private access for ongoing discussions</li>
+                        <li>Framework updates and extensions</li>
+                        <li>Additional novel architectures</li>
+                        <li>Quantum-cognitive extensions</li>
+                        <li>"Thriving demanded a particular struggle; one some still wrestle with alone."</li>
+                        <li>"So you see, failure wasn’t an option, it was a function I called my own."</li>
+                    </ul>
+                    <div class="stripe-button-container">
                         <stripe-buy-button
                             buy-button-id="buy_btn_1RsuMlL34zkKvDSINBIdHgti"
                             publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
                         </stripe-buy-button>
                     </div>
                 </div>
-            </section>
-
-            <!-- Benefits Section -->
-            <section class="benefits-section">
-                <h2 class="benefits-title">Why This Approach Changes Everything</h2>
-                <p class="tier-description" style="margin-bottom: 0;">
-                    Traditional AI development focuses on behaviors and outputs. The IAM Framework implements the philosophical substrate that generates behaviors autonomously—creating genuine collaborative intelligence.
-                </p>
-                
-                <div class="benefits-grid">
-                    <div class="benefit-item">
-                        <span class="benefit-icon" style="color: #00d4ff;">🧠</span>
-                        <h3 class="benefit-title">Autonomous Intelligence</h3>
-                        <p class="benefit-description">
-                            Systems develop curiosity, ethics, and collaborative capabilities as emergent properties rather than programmed behaviors.
-                        </p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <span class="benefit-icon" style="color: #7c3aed;">⚡</span>
-                        <h3 class="benefit-title">Radical Efficiency</h3>
-                        <p class="benefit-description">
-                            10-100x power consumption improvements through hierarchical processing that mirrors biological cognitive efficiency.
-                        </p>
-                    </div>
-                    
-                    <div class="benefit-item">
-                        <span class="benefit-icon" style="color: #ff006e;">🤝</span>
-                        <h3 class="benefit-title">True Collaboration</h3>
-                        <p class="benefit-description">
-                            Human-AI partnerships that amplify rather than replace human capabilities, creating genuine intellectual collaboration.
-                        </p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Security Note -->
-            <div class="security-note">
-                <div class="security-note-title">🔒 Secure Research Access</div>
-                <div class="security-note-text">
-                    All payments processed securely through Stripe. Immediate GitHub repository access upon purchase completion. 
-                    30-day satisfaction guarantee on all tiers.
-                </div>
             </div>
+        </section>
 
-            <!-- Contact Form -->
-            <section class="form-section">
-                <h2 class="section-title">Questions? Get Direct Access to the Research</h2>
-                <p class="description">
-                    Want to discuss the framework directly or need custom implementation support? 
-                    Connect with the researcher behind the Philosophical Source Code.
-                </p>
-                
-                <div class="form-container">
-                    <iframe 
-                        class="google-form"
-                        src="https://docs.google.com/forms/d/e/1FAIpQLScDGAibOrpyDsAEXM_SRqtS-bnAH2Nmf1ua9ciZq7KA5NX-2A/viewform?embedded=true" 
+        <section class="contact-section">
+            <h2>Get Started Today</h2>
+            <p>Ready to explore the future of human-AI collaboration? Choose your access level and receive secure repository access.</p>
+            <p><strong>GitHub username recommended for cleanest delivery of private repository access.</strong></p>
+            
+            <div class="contact-form-container">
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDGAibOrpyDsAEXM_SRqtS-bnAH2Nmf1ua9ciZq7KA5NX-2A/viewform?embedded=true" 
+                        width="640" 
+                        height="600" 
                         frameborder="0" 
                         marginheight="0" 
                         marginwidth="0">
-                        Loading contact form...
-                    </iframe>
-                    
-                    <p class="form-note">
-                        Your information is secure and will only be used to provide you with the requested materials and research access.
-                    </p>
-                </div>
-            </section>
-        </main>
+                    Loading contact form...
+                </iframe>
+            </div>
+        </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>Research by Micheal Langille • Philosophical Source Code • 2025</p>
-            <p style="margin-top: 10px; font-size: 0.9rem;">
-                Questions? Contact: michealangille@gmail.com
-            </p>
-        </footer>
+        <div class="disclaimer">
+            <p><strong>Research Disclosure:</strong> The IAM Framework represents cutting-edge theoretical and applied research in AI architecture. Results are based on experimental implementations and ongoing development. All purchases include access to research materials and implementations as described. Technical support and consultation available for higher-tier packages.</p>
+            <p><strong>Delivery:</strong> Digital access provided via secure repositories and private channels. Payment processed through Stripe with standard consumer protections.</p>
+        </div>
     </div>
-
-    <script>
-        // Create floating particles
-        function createParticles() {
-            const container = document.querySelector('.particles');
-            if (!container) return;
-            
-            for (let i = 0; i < 50; i++) {
-                const particle = document.createElement('div');
-                particle.className = 'particle';
-                particle.style.left = Math.random() * 100 + '%';
-                particle.style.animationDelay = Math.random() * 6 + 's';
-                particle.style.animationDuration = (Math.random() * 3 + 4) + 's';
-                container.appendChild(particle);
-            }
-        }
-
-        // Initialize when page loads
-        document.addEventListener('DOMContentLoaded', createParticles);
-
-        // Add some interactive particle effects on hover
-        document.addEventListener('mousemove', function(e) {
-            if (Math.random() < 0.1) {
-                const particle = document.createElement('div');
-                particle.style.position = 'fixed';
-                particle.style.left = e.clientX + 'px';
-                particle.style.top = e.clientY + 'px';
-                particle.style.width = '1px';
-                particle.style.height = '1px';
-                particle.style.background = 'rgba(0, 212, 255, 0.8)';
-                particle.style.borderRadius = '50%';
-                particle.style.pointerEvents = 'none';
-                particle.style.animation = 'float 2s ease-out forwards';
-                document.body.appendChild(particle);
-                
-                setTimeout(() => {
-                    document.body.removeChild(particle);
-                }, 2000);
-            }
-        });
-    </script>
 </body>
 </html>
-                    
