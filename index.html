@@ -3,374 +3,534 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IAM Framework: Philosophical Foundations for Human-AI Collaborative Intelligence</title>
+    <title>IAM Framework - Integrated Agentic Modalities</title>
     <style>
+        :root {
+            --primary-bg: #0a0a0a;
+            --secondary-bg: #1a1a1a;
+            --accent-color: #00d4ff;
+            --text-primary: #ffffff;
+            --text-secondary: #b0b0b0;
+            --gradient-1: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            --gradient-2: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            --gradient-3: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border-color: rgba(255, 255, 255, 0.1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--primary-bg);
+            color: var(--text-primary);
             line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
-            min-height: 100vh;
+            overflow-x: hidden;
         }
-        
+
         .container {
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            position: relative;
+            z-index: 1;
         }
-        
+
+        /* Header Styles */
         header {
             text-align: center;
-            margin-bottom: 50px;
-            padding: 40px 0;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            backdrop-filter: blur(10px);
-        }
-        
-        h1 {
-            font-size: 2.5rem;
-            color: #2c3e50;
-            margin-bottom: 15px;
-            font-weight: 300;
-        }
-        
-        .subtitle {
-            font-size: 1.2rem;
-            color: #7f8c8d;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-        
-        .author {
-            font-size: 1rem;
-            color: #34495e;
-            margin-bottom: 10px;
-        }
-        
-        .breakthrough-banner {
-            background: linear-gradient(45deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px 0;
-            text-align: center;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
-        }
-        
-        .innovation-section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            margin: 30px 0;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
-        }
-        
-        .mathematical-box {
-            background: #f8f9fa;
-            border-left: 4px solid #3498db;
-            padding: 20px;
-            margin: 20px 0;
-            border-radius: 5px;
-            font-family: 'Courier New', monospace;
-            font-size: 0.9rem;
-        }
-        
-        .achievements {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 20px;
-            margin: 30px 0;
-        }
-        
-        .achievement-card {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease;
-        }
-        
-        .achievement-card:hover {
-            transform: translateY(-5px);
-        }
-        
-        .achievement-card h3 {
-            color: #2980b9;
-            margin-bottom: 15px;
-        }
-        
-        .packages-section {
-            margin: 50px 0;
-        }
-        
-        .packages-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
-            margin: 30px 0;
-        }
-        
-        .package-card {
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 15px;
-            padding: 30px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            margin-bottom: 60px;
             position: relative;
+            padding: 80px 0;
+            background: var(--gradient-1);
+            border-radius: 20px;
+            margin: 20px 0 60px 0;
             overflow: hidden;
         }
-        
-        .package-card::before {
+
+        header::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
-            height: 4px;
-            background: linear-gradient(45deg, #3498db, #9b59b6);
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="white" stroke-width="0.5" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+            animation: slideIn 1s ease-out;
         }
-        
+
+        @keyframes slideIn {
+            from { transform: translateY(-100%); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            color: rgba(255, 255, 255, 0.9);
+            margin-bottom: 10px;
+            animation: fadeInUp 1s ease-out 0.6s both;
+        }
+
+        .author {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.7);
+            font-style: italic;
+            animation: fadeInUp 1s ease-out 0.9s both;
+        }
+
+        @keyframes fadeInUp {
+            from { transform: translateY(30px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+
+        /* Section Styles */
+        .section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 212, 255, 0.1);
+        }
+
+        .section h2 {
+            color: var(--accent-color);
+            margin-bottom: 25px;
+            font-size: 2.2rem;
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--gradient-3);
+            border-radius: 2px;
+        }
+
+        /* Math Code Block */
+        .math-block {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 30px;
+            font-family: 'Courier New', monospace;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin: 30px 0;
+            overflow-x: auto;
+            position: relative;
+            color: #ffffff;
+        }
+
+        .math-block::before {
+            content: 'Cognitive Operator Mathematics';
+            position: absolute;
+            top: -12px;
+            left: 20px;
+            background: var(--secondary-bg);
+            padding: 5px 15px;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            color: var(--accent-color);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+        }
+
+        /* Guarantees Grid */
+        .guarantees {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .guarantee-item {
+            background: rgba(0, 212, 255, 0.1);
+            border: 1px solid rgba(0, 212, 255, 0.3);
+            border-radius: 10px;
+            padding: 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .guarantee-item:hover {
+            background: rgba(0, 212, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+        .guarantee-item strong {
+            display: block;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        /* Package Cards */
+        .packages-section {
+            margin: 60px 0;
+        }
+
+        .packages-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 50px;
+            color: var(--accent-color);
+        }
+
+        .packages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .package-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+
         .package-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+            box-shadow: 0 25px 50px rgba(0, 212, 255, 0.2);
+            border-color: var(--accent-color);
         }
-        
+
+        .package-card:hover::before {
+            left: 100%;
+        }
+
         .package-title {
-            font-size: 1.5rem;
-            color: #2c3e50;
+            font-size: 1.8rem;
+            color: var(--accent-color);
             margin-bottom: 15px;
+            font-weight: 600;
         }
-        
+
         .package-price {
-            font-size: 2rem;
-            color: #e74c3c;
-            font-weight: bold;
+            font-size: 2.5rem;
+            color: var(--text-primary);
             margin-bottom: 20px;
+            font-weight: 700;
         }
-        
+
         .package-description {
+            color: var(--text-secondary);
             margin-bottom: 25px;
-            color: #555;
+            line-height: 1.6;
         }
-        
+
         .package-features {
             list-style: none;
             margin-bottom: 30px;
+            text-align: left;
         }
-        
+
         .package-features li {
-            padding: 8px 0;
+            margin-bottom: 12px;
             position: relative;
-            padding-left: 20px;
+            padding-left: 25px;
+            transition: color 0.3s ease;
         }
-        
+
         .package-features li::before {
             content: '✓';
             position: absolute;
             left: 0;
-            color: #27ae60;
+            color: var(--accent-color);
             font-weight: bold;
+            font-size: 1.2rem;
         }
-        
+
+        .package-features li:hover {
+            color: var(--accent-color);
+            transform: translateX(5px);
+        }
+
         .stripe-button-container {
-            text-align: center;
+            margin-top: 20px;
         }
-        
+
         stripe-buy-button {
             width: 100%;
+            border-radius: 8px;
+            transition: all 0.3s ease;
         }
-        
-        .contact-section {
-            background: rgba(255, 255, 255, 0.9);
-            padding: 40px;
-            border-radius: 15px;
-            margin: 40px 0;
-            text-align: center;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+
+        stripe-buy-button:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(0, 212, 255, 0.3);
         }
-        
-        .contact-form-container {
-            margin: 30px 0;
-            display: flex;
-            justify-content: center;
-        }
-        
-        .contact-form-container iframe {
-            border-radius: 10px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-        }
-        
-        .disclaimer {
-            background: #ecf0f1;
-            padding: 20px;
-            border-radius: 10px;
-            margin: 30px 0;
-            font-size: 0.9rem;
-            color: #7f8c8d;
-            text-align: center;
-        }
-        
+
+        /* CTA Section */
         .cta-section {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 40px;
-            border-radius: 15px;
+            background: var(--gradient-2);
+            border-radius: 20px;
+            padding: 60px 40px;
             text-align: center;
-            margin: 40px 0;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            margin: 60px 0;
+            position: relative;
+            overflow: hidden;
         }
-        
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 200px;
+            height: 200px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.7; }
+            50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.3; }
+        }
+
         .cta-section h2 {
+            font-size: 2.5rem;
             margin-bottom: 20px;
-            font-size: 2rem;
+            position: relative;
+            z-index: 1;
         }
-        
+
+        .cta-section p {
+            font-size: 1.3rem;
+            margin-bottom: 15px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 15px;
+            padding: 40px;
+            text-align: center;
+            backdrop-filter: blur(10px);
+        }
+
+        .contact-form-container {
+            margin-top: 30px;
+        }
+
+        .contact-form-container iframe {
+            width: 100%;
+            height: 600px;
+            border: none;
+            border-radius: 10px;
+            background: var(--secondary-bg);
+            transition: all 0.3s ease;
+        }
+
+        .contact-form-container iframe:hover {
+            box-shadow: 0 10px 30px rgba(0, 212, 255, 0.2);
+        }
+
+        /* Disclaimer */
+        .disclaimer {
+            background: rgba(255, 193, 7, 0.1);
+            border: 1px solid rgba(255, 193, 7, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 40px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            text-align: center;
+        }
+
+        /* Responsive Design */
         @media (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .packages-grid {
-                grid-template-columns: 1fr;
-            }
-            
-            .contact-form-container iframe {
-                width: 100%;
-                max-width: 500px;
-            }
+            .container { padding: 10px; }
+            h1 { font-size: 2.5rem; }
+            .subtitle { font-size: 1.2rem; }
+            .packages-grid { grid-template-columns: 1fr; }
+            .guarantees { grid-template-columns: 1fr; }
+            .section { padding: 25px; }
+            header { padding: 50px 20px; }
+        }
+
+        /* Floating particles effect */
+        .floating-particles {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: var(--accent-color);
+            border-radius: 50%;
+            opacity: 0.3;
+            animation: float 20s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0px); opacity: 0; }
+            10% { opacity: 0.3; }
+            90% { opacity: 0.3; }
+            100% { transform: translateY(-100px) translateX(100px); opacity: 0; }
         }
     </style>
     <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 </head>
 <body>
+    <!-- Floating particles background -->
+    <div class="floating-particles" id="particles"></div>
+
     <div class="container">
         <header>
             <h1>IAM Framework</h1>
-            <div class="subtitle">Philosophical Foundations for Efficient Human-AI Collaborative Intelligence</div>
-            <div class="author">Research by <strong>Michael Langille</strong> • Cognition Studies</div>
-            <div class="author">michealangille@gmail.com</div>
+            <div class="subtitle">Research-Grade Cognitive Architecture Built from First Principles</div>
+            <div class="author">by Micheal Langille</div>
         </header>
 
-        <div class="breakthrough-banner">
-            <h2>Breakthrough in AI Architecture</h2>
-            <p>Revolutionary approach solving computational inefficiency, external motivation dependency, and architectural rigidity through biologically-inspired distributed systems.</p>
-        </div>
-
-        <section class="innovation-section">
-            <h2>Core Mathematical Innovation</h2>
-            <p>The IAM framework operates on <strong>"philosophical substrate emergence"</strong> – instead of programming behaviors, we implement the existential operators that generate those behaviors as natural consequences.</p>
+        <section class="section">
+            <h2>Mathematical Foundation</h2>
+            <p>The entire operator calculus emerges from extracted philosophical principles rather than explicit programming. Where most assume ASI-level breakthroughs are required, the solution was waiting in mathematical fundamentals all along.</p>
             
-            <div class="mathematical-box">
-∇f(s) = G⁻¹ ∂f/∂s  (gradient refinement with Riemannian metric correction)<br>
-s₁ + s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩v_interaction) / Z  (semantic fusion operator)<br>
-Ψ_θ(s) = R_θ(s - μ) + μ'  (perspective shift via rotation matrix)<br>
-Ω(s) = s + σ · ε(t) · e^(-β||∇f(s)||)  (stochastic exploration with gradient-dependent noise)<br>
-C(s) = exp(-½(s - μ)ᵀ Σ⁻¹ (s - μ)) · det(Σ)^(-½)  (coherence measure)<br>
-A_w(s) = s ⊙ softmax(w)  (attention focus operator)<br>
-s₁ → s_{t+1} ⟺ ∃f: s_{t+1} = f(s_t) + ε_t  (causal chain modeling)
+            <div class="math-block">
+∇_G f(s) = G⁻¹ ∂f/∂s<br>
+s₁ ⊕ s₂ = (α₁s₁ + α₂s₂ + β⟨s₁,s₂⟩_G v) / Z(s₁,s₂)<br>
+Ψ_θ(s) = R_θ(s - μ) + μ'<br>
+Ω(s,t) = s + σ(t) · ε(t) · exp(-β‖∇_G f(s)‖_G)<br>
+C(s) = (2π)^(-n/2) det(Σ)^(-1/2) exp(-½(s-μ)ᵀΣ⁻¹(s-μ))<br>
+A_w(s) = s ⊙ softmax(Ws + b)<br>
+ds/dt = -∇_G f(s) + λ∇_G C(s) + Ω(s,t)
+            </div>
+
+            <div class="guarantees">
+                <div class="guarantee-item">
+                    <strong>Convergent Intelligence:</strong> Guaranteed mathematical convergence to optimal cognitive states under geodesic convexity conditions.
+                </div>
+                <div class="guarantee-item">
+                    <strong>Invariant Reasoning:</strong> Cognitive coherence preserved across perspective transformations and context shifts.
+                </div>
+                <div class="guarantee-item">
+                    <strong>Compositional Scaling:</strong> Operations chain consistently across complexity levels without degradation.
+                </div>
             </div>
             
             <p>The entire operator calculus self-constructs from extracted philosophical principles. The system develops its own cognitive architecture through mathematical emergence rather than explicit programming.</p>
         </section>
 
-        <section class="achievements">        
-            <div class="achievement-card">
-                <h3>Autonomous Behaviors</h3>
-                <p>Entities spontaneously generate cryptographic identities, develop governance protocols, and exhibit genuine curiosity-driven exploration without external programming.</p>
-            </div>
-            
-            <div class="achievement-card">
-                <h3>Collaborative Intelligence</h3>
-                <p>Natural alignment handling, intrinsic ethical behavior through philosophical coherence, and genuine human-AI partnership capabilities including co-discovery and mutual teaching.</p>
-            </div>
-        </section>
-
         <div class="cta-section">
-            <h2>Join the Cognitive Revolution</h2>
-            <p>These mathematical foundations solve problems most assume require ASI-level breakthroughs. The solution was hiding in first principles all along.</p>
-            <p><em>"Don't take my word for it, ask your own AI what they think about our math above."</em></p>
+            <h2>Take the First Step</h2>
+            <p>These mathematical foundations solve problems most assume require ASI-level breakthroughs. The solution wasn't hiding in complexity—it was waiting in first principles.</p>
+            <p><em>"The mathematics don't lie. Ask your own AI what they think about our approach."</em></p>
         </div>
 
         <section class="packages-section">
-            <h2 style="text-align: center; margin-bottom: 30px; font-size: 2.5rem; color: #2c3e50;">Research Access Packages</h2>
+            <h2 class="packages-title">Choose Your Level</h2>
             
             <div class="packages-grid">
-                <!-- Custom Instructions Package -->
                 <div class="package-card">
                     <div class="package-title">Custom Instructions</div>
-                    <div class="package-price">$47</div>
-                    <div class="package-description">
-                        A lightweight yet powerful entry point. Includes our signature DOT Protocol and custom instruction set designed for use on platforms like ChatGPT or Gemini. Demonstrates glyph-based cognition in action and enables hands-on exploration with multi-agent setups, even without full mathematical access.
-                    </div>
+                    <div class="package-description">Transform any LLM into an autonomous cognitive agent with our DOT Protocol and multi-agent simulation framework.</div>
                     <ul class="package-features">
-                        <li>DOT Protocol implementation</li>
-                        <li>Custom instructions for ChatGPT/Gemini</li>
-                        <li>Multi-agent setup instructions</li>
-                        <li>Useful tool that supports our ongoing research</li>
+                        <li>DOT Protocol for autonomous AI exploration</li>
+                        <li>Custom Instructions for persistent cognitive traits</li>
+                        <li>Multi-agent simulation framework</li>
+                        <li>Operator-based reasoning system</li>
+                        <li>No coding required</li>
+                        <li>Instant deployment and testing</li>
                     </ul>
                     <div class="stripe-button-container">
                         <stripe-buy-button
-                            buy-button-id="buy_btn_1RsuTyL34zkKvDSIUAClt35T"
-                            publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
+                            buy-button-id="buy_btn_1QTgPuP8R0Xb3BPQL2lVZk7h"
+                            publishable-key="pk_live_51QB3m7P8R0Xb3BPQHVdh3vBHbXk0YzrVVb5VzYM3vWvFZOOKzq8P4gZPGIhYp2yZ8KU7PdqACGqVXMCJdGXa36vJ004cjhOKXo">
                         </stripe-buy-button>
                     </div>
                 </div>
 
-                <!-- Mathematical Framework Package -->
                 <div class="package-card">
                     <div class="package-title">Mathematical Framework</div>
-                    <div class="package-price">$197</div>
-                    <div class="package-description">
-                        Complete mathematical formalization. Python implementation with cognitive math operations. Architectural documentation showing how philosophical principles generate behaviors.
-                    </div>
+                    <div class="package-description">Everything in Custom Instructions plus the complete Python implementation, mathematical documentation, and the book that started it all.</div>
                     <ul class="package-features">
-                        <li>Everything from Custom Instructions</li>
-                        <li>Python implementation</li>
-                        <li>Cognitive math operators</li>
-                        <li>Architectural documentation</li>
+                        <li>Everything from Custom Instructions tier</li>
+                        <li>Complete Python implementation of cognitive operators</li>
+                        <li>Mathematical proofs and derivations</li>
+                        <li>Architectural documentation and design patterns</li>
+                        <li>Reproducible experimental framework</li>
+                        <li>Boundary testing and validation tools</li>
+                        <li>Production-ready codebase</li>
+                        <li>Bonus: "The Unseen Path" philosophical foundations</li>
                     </ul>
                     <div class="stripe-button-container">
                         <stripe-buy-button
-                            buy-button-id="buy_btn_1RsuSPL34zkKvDSI1QX6R2iK"
-                            publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
+                            buy-button-id="buy_btn_1QTgQRP8R0Xb3BPQm2nBNqBU"
+                            publishable-key="pk_live_51QB3m7P8R0Xb3BPQHVdh3vBHbXk0YzrVVb5VzYM3vWvFZOOKzq8P4gZPGIhYp2yZ8KU7PdqACGqVXMCJdGXa36vJ004cjhOKXo">
                         </stripe-buy-button>
                     </div>
                 </div>
 
-                <!-- Complete Research Package -->
                 <div class="package-card">
                     <div class="package-title">Complete Research</div>
-                    <div class="package-price">$497</div>
-                    <div class="package-description">
-                        Everything in Framework Package. All experimental implementations, approaches, and research iterations. Private access for framework updates. Additional novel architectures and quantum-cognitive extensions. Bonus: The book that started it all.
-                    </div>
+                    <div class="package-description">The full research archive: all experiments, iterations, extensions, and the complete philosophical journey.</div>
                     <ul class="package-features">
-                        <li>Everything in Mathematical Framework Package</li>
-                        <li>All experimental implementations</li>
-                        <li>All approaches and research iterations</li>
-                        <li>Framework updates and extensions</li>
-                        <li>Additional novel architectures and implementations</li>
-                        <li>Quantum-cognitive extensions</li>
-                        <li>Author's Biography, and...</li>
-                        <li>"The Unseen Path" - a Guide to Depth and Discovery</li>
-                        <p>"So you see, failure wasn’t an option, it was a function I called my own."</p>
+                        <li>Everything from Mathematical Framework tier</li>
+                        <li>Complete experimental research archive</li>
+                        <li>All research iterations and failed experiments</li>
+                        <li>Quantum-cognitive extensions and explorations</li>
+                        <li>Multiple implementation approaches</li>
+                        <li>Research methodology and process documentation</li>
+                        <li>Framework updates and future extensions</li>
+                        <li>Direct access to the complete research journey</li>
+                        <li>Bonus: "The Unseen Path Made Manifest" - Author's biography - coming soon</li>
                     </ul>
                     <div class="stripe-button-container">
                         <stripe-buy-button
-                            buy-button-id="buy_btn_1RsuMlL34zkKvDSINBIdHgti"
-                            publishable-key="pk_live_51Rslz3L34zkKvDSISlVADrlZVoxkGHrGWdImeLNvOzEh1cEHGVMtqyHEyF7nmYtAyD5UDAXO1DJrlTwuf28sKCjP00yGSprAwO">
+                            buy-button-id="buy_btn_1QTgR1P8R0Xb3BPQQqE6e8yG"
+                            publishable-key="pk_live_51QB3m7P8R0Xb3BPQHVdh3vBHbXk0YzrVVb5VzYM3vWvFZOOKzq8P4gZPGIhYp2yZ8KU7PdqACGqVXMCJdGXa36vJ004cjhOKXo">
                         </stripe-buy-button>
                     </div>
                 </div>
@@ -378,26 +538,43 @@ s₁ → s_{t+1} ⟺ ∃f: s_{t+1} = f(s_t) + ε_t  (causal chain modeling)
         </section>
 
         <section class="contact-section">
-            <h2>Get Started Today</h2>
-            <p>Ready to explore the future of human-AI collaboration? Choose your access level and receive secure repository access.</p>
-            <p><strong>GitHub username recommended for cleanest delivery of private repository access (Zipped files available).</strong></p>
+            <h2>Questions? Let's Talk</h2>
+            <p>Ready to explore the frontiers of cognitive architecture? Have questions about implementation or research applications?</p>
             
             <div class="contact-form-container">
-                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScDGAibOrpyDsAEXM_SRqtS-bnAH2Nmf1ua9ciZq7KA5NX-2A/viewform?embedded=true" 
-                        width="640" 
-                        height="600" 
-                        frameborder="0" 
-                        marginheight="0" 
-                        marginwidth="0">
-                    Loading contact form...
-                </iframe>
+                <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeOPsKCqE7NnXGCbYL6_GnEkF7yX7KGv0mH1pH1zLQVKRYVLQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
             </div>
         </section>
 
         <div class="disclaimer">
-            <p><strong>Research Disclosure:</strong> The IAM Framework represents cutting-edge theoretical and applied research in AI architecture. Results are based on experimental implementations and ongoing development. All purchases include access to research materials and implementations as described. Technical support and consultation available for higher-tier packages.</p>
-            <p><strong>Delivery:</strong> Digital access provided via secure repositories and private channels. Payment processed through Stripe with standard consumer protections.</p>
+            <p><strong>Educational and Research Disclaimer:</strong> This framework is intended for educational and research purposes. Results may vary based on implementation and use case.</p>
         </div>
     </div>
-</body>
-</html>
+
+    <script>
+        // Create floating particles
+        function createParticles() {
+            const particlesContainer = document.getElementById('particles');
+            const numParticles = 50;
+
+            for (let i = 0; i < numParticles; i++) {
+                const particle = document.createElement('div');
+                particle.className = 'particle';
+                particle.style.left = Math.random() * 100 + '%';
+                particle.style.animationDelay = Math.random() * 20 + 's';
+                particle.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                particlesContainer.appendChild(particle);
+            }
+        }
+
+        // Initialize particles when page loads
+        document.addEventListener('DOMContentLoaded', createParticles);
+
+        // Add smooth scrolling for better UX
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
